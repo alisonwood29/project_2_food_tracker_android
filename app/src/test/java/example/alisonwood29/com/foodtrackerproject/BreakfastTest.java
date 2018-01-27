@@ -1,0 +1,30 @@
+package example.alisonwood29.com.foodtrackerproject;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+/**
+ * Created by alisonwood29 on 27/01/2018.
+ */
+
+public class BreakfastTest {
+
+    Breakfast breakfast;
+
+    @Before
+    public void before(){
+        breakfast = new Breakfast("porridge with milk", 120);
+    }
+
+    @Test
+    public void canGetFood(){
+        assertEquals("porridge with milk", breakfast.getFood());
+    }
+
+    @Test
+    public void canGetCalories(){
+        assertEquals(120, breakfast.getCalories());
+    }
+}
