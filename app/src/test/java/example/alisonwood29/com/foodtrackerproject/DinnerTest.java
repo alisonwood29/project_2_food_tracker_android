@@ -27,4 +27,16 @@ public class DinnerTest {
     public void canGetCalories(){
         assertEquals(420, dinner.getCalories());
     }
+
+    @Test
+    public void canSetFood(){
+        dinner.setFood("chicken korma with rice");
+        assertEquals("chicken korma with rice", dinner.getFood());
+    }
+
+    @Test
+    public void canSetCalories(){
+        dinner.setCalories(615);
+        assertEquals(615, dinner.getCalories());
+    }
 }

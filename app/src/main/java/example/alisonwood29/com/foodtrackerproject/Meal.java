@@ -21,4 +21,12 @@ public abstract class Meal {
     public int getCalories() {
         return this.calories;
     }
+
+    public void setFood(String food) {
+        this.food = food;
+    }
+
+    public void setCalories(int calories) {
+        this.calories = calories;
+    }
 }

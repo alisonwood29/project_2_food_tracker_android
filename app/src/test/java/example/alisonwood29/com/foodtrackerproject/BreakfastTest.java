@@ -27,4 +27,16 @@ public class BreakfastTest {
     public void canGetCalories(){
         assertEquals(120, breakfast.getCalories());
     }
+
+    @Test
+    public void canSetFood(){
+        breakfast.setFood("branflakes with milk");
+        assertEquals("branflakes with milk", breakfast.getFood());
+    }
+
+    @Test
+    public void canSetCalories(){
+        breakfast.setCalories(180);
+        assertEquals(180, breakfast.getCalories());
+    }
 }
