@@ -35,4 +35,8 @@ public class DailyFood {
     public int getCalories(Meal meal) {
         return meal.getCalories();
     }
+
+    public int totalCalories() {
+        return getCalories(this.breakfast) + getCalories(this.lunch) + getCalories(this.dinner);
+    }
 }

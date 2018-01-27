@@ -40,11 +40,6 @@ public class DailyFoodTest {
     }
 
     @Test
-    public void canGetTotalCalories(){
-
-    }
-
-    @Test
     public void canGetFoodFromBreakfast(){
         assertEquals("toast with jam", dailyFood.getFood(breakfast));
     }
@@ -57,6 +52,11 @@ public class DailyFoodTest {
     @Test
     public void canGetCaloriesFromDinner(){
         assertEquals(650, dailyFood.getCalories(dinner));
+    }
+
+    @Test
+    public void canGetTotalCalories(){
+        assertEquals(1100, dailyFood.totalCalories());
     }
 
 }
