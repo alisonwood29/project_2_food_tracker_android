@@ -9,11 +9,14 @@ public class DailyFood {
     private Breakfast breakfast;
     private Lunch lunch;
     private Dinner dinner;
+    private int maxCalories;
 
-    public DailyFood(Breakfast breakfast, Lunch lunch, Dinner dinner){
+
+    public DailyFood(Breakfast breakfast, Lunch lunch, Dinner dinner, int maxCalories){
         this.breakfast = breakfast;
         this.lunch = lunch;
         this.dinner = dinner;
+        this.maxCalories = maxCalories;
     }
 
     public Breakfast getBreakfast() {
@@ -38,5 +41,17 @@ public class DailyFood {
 
     public int totalCalories() {
         return getCalories(this.breakfast) + getCalories(this.lunch) + getCalories(this.dinner);
+    }
+
+    public int getMaxCalories() {
+        return this.maxCalories;
+    }
+
+    public void setMaxCalories(int maxCalories) {
+        this.maxCalories = maxCalories;
+    }
+
+    public int caloriesRemaining() {
+        return this.maxCalories - totalCalories();
     }
 }

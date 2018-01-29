@@ -26,7 +26,7 @@ public class FoodTrackerTest {
         breakfast = new Breakfast("toast with jam", 200);
         lunch = new Lunch("chicken salad", 250);
         dinner = new Dinner("pizza", 650);
-        dailyFood = new DailyFood(breakfast, lunch, dinner);
+        dailyFood = new DailyFood(breakfast, lunch, dinner, 1500);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class FoodTrackerTest {
     @Test
     public void canFormatStringToDate(){
         foodTracker.formatDate();
-        assertEquals("29/01/2018", foodTracker.getDate());
+        assertEquals("29-01-2018", foodTracker.getDate());
     }
 
     @Test
@@ -57,6 +57,6 @@ public class FoodTrackerTest {
         ArrayList<DailyFood> expected = new ArrayList<>();
         expected.add(dailyFood);
         assertEquals(expected, foodTracker.getDailyFoodsList());
-
     }
+
 }

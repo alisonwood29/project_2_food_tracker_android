@@ -37,13 +37,9 @@ public class FoodTracker {
 
     public void formatDate() {
         try{
-            Date formattedDate = new SimpleDateFormat("dd/MM/yyyy").parse(this.date);
+            Date formattedDate = new SimpleDateFormat("dd-MM-yyyy").parse(this.date);
         } catch (ParseException e){
             e.printStackTrace();
         }
     }
-
-//    public Date formatDate(String date) {
-//        Date formattedDate = new SimpleDateFormat("dd/MM/yyyy").parse(date);
-//    }
 }
