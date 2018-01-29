@@ -15,6 +15,11 @@ public class FoodTracker {
 
     public FoodTracker(){
         this.dailyFoods = new ArrayList<>();
+        Breakfast breakfast = new Breakfast("toast with jam", 200);
+        Lunch lunch = new Lunch("chicken salad", 250);
+        Dinner dinner = new Dinner("pizza", 650);
+        DailyFood dailyFood = new DailyFood("29/01/2018", breakfast, lunch, dinner);
+        addDailyFood(dailyFood);
     }
 
     public int dailyMealsCount() {

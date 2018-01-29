@@ -35,10 +35,10 @@ public class FoodTrackerAdapter extends ArrayAdapter<DailyFood> {
         breakfast.setText(currentDailyFood.getBreakfast().getFood());
 
         TextView lunch = (TextView) listItemView.findViewById(R.id.lunch_view);
-        breakfast.setText(currentDailyFood.getLunch().getFood());
+        lunch.setText(currentDailyFood.getLunch().getFood());
 
         TextView dinner = (TextView) listItemView.findViewById(R.id.dinner_view);
-        breakfast.setText(currentDailyFood.getDinner().getFood());
+        dinner.setText(currentDailyFood.getDinner().getFood());
 
         return listItemView;
 
