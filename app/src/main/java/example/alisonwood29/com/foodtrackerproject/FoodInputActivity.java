@@ -54,9 +54,9 @@ public class FoodInputActivity extends AppCompatActivity {
         int dinnerCaloriesInput = Integer.valueOf(dinnerCalories.getText().toString());
         Dinner dinner = new Dinner(dinnerFoodInput, dinnerCaloriesInput);
 
-        DailyFood dailyFoodInput = new DailyFood(breakfast, lunch, dinner);
+        DailyFood dailyFoodInput = new DailyFood(dateInput, breakfast, lunch, dinner);
 
-        FoodTracker foodTracker = new FoodTracker(dateInput);
+        FoodTracker foodTracker = new FoodTracker();
         foodTracker.addDailyFood(dailyFoodInput);
     }
 

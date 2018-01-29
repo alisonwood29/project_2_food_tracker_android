@@ -6,17 +6,27 @@ package example.alisonwood29.com.foodtrackerproject;
 
 public class DailyFood {
 
+    private String date;
     private Breakfast breakfast;
     private Lunch lunch;
     private Dinner dinner;
     private int maxCalories;
 
 
-    public DailyFood(Breakfast breakfast, Lunch lunch, Dinner dinner){
+    public DailyFood(String date, Breakfast breakfast, Lunch lunch, Dinner dinner){
+        this.date = date;
         this.breakfast = breakfast;
         this.lunch = lunch;
         this.dinner = dinner;
         this.maxCalories = 1500;
+    }
+
+    public String getDate() {
+        return this.date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public Breakfast getBreakfast() {

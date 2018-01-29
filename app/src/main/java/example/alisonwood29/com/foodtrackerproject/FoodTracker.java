@@ -11,16 +11,10 @@ import java.util.Date;
 
 public class FoodTracker {
 
-    private String date;
     private ArrayList<DailyFood> dailyFoods;
 
-    public FoodTracker(String date){
-        this.date = date;
+    public FoodTracker(){
         this.dailyFoods = new ArrayList<>();
-    }
-
-    public String getDate() {
-        return this.date;
     }
 
     public int dailyMealsCount() {
@@ -33,10 +27,6 @@ public class FoodTracker {
 
     public ArrayList<DailyFood> getDailyFoodsList() {
         return this.dailyFoods;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 
 //    public void formatDate() {

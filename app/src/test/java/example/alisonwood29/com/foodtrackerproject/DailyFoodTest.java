@@ -21,7 +21,18 @@ public class DailyFoodTest {
         breakfast = new Breakfast("toast with jam", 200);
         lunch = new Lunch("chicken salad", 250);
         dinner = new Dinner("pizza", 650);
-        dailyFood = new DailyFood(breakfast, lunch, dinner);
+        dailyFood = new DailyFood("29/01/2018", breakfast, lunch, dinner);
+    }
+
+    @Test
+    public void canGetDate(){
+        assertEquals("29/01/2018", dailyFood.getDate());
+    }
+
+    @Test
+    public void canSetDate(){
+        dailyFood.setDate("30/01/2018");
+        assertEquals("30/01/2018", dailyFood.getDate());
     }
 
     @Test
