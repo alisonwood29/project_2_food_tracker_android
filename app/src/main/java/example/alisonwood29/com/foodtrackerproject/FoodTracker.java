@@ -35,6 +35,10 @@ public class FoodTracker {
         return this.dailyFoods;
     }
 
+    public void setDate(String date) {
+        this.date = date;
+    }
+
 //    public void formatDate() {
 //        try{
 //            Date formattedDate = new SimpleDateFormat("dd-MM-yyyy").parse(this.date);

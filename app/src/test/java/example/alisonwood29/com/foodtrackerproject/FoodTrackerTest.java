@@ -34,6 +34,12 @@ public class FoodTrackerTest {
         assertEquals("29/01/2018", foodTracker.getDate());
     }
 
+    @Test
+    public void canSetDate(){
+        foodTracker.setDate("30/01/2018");
+        assertEquals("30/01/2018", foodTracker.getDate());
+    }
+
 //    @Test
 //    public void canFormatStringToDate(){
 //        foodTracker.formatDate();
