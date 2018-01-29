@@ -12,11 +12,11 @@ public class DailyFood {
     private int maxCalories;
 
 
-    public DailyFood(Breakfast breakfast, Lunch lunch, Dinner dinner, int maxCalories){
+    public DailyFood(Breakfast breakfast, Lunch lunch, Dinner dinner){
         this.breakfast = breakfast;
         this.lunch = lunch;
         this.dinner = dinner;
-        this.maxCalories = maxCalories;
+        this.maxCalories = 1500;
     }
 
     public Breakfast getBreakfast() {

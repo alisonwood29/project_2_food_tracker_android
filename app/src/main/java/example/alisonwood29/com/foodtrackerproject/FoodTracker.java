@@ -35,11 +35,11 @@ public class FoodTracker {
         return this.dailyFoods;
     }
 
-    public void formatDate() {
-        try{
-            Date formattedDate = new SimpleDateFormat("dd-MM-yyyy").parse(this.date);
-        } catch (ParseException e){
-            e.printStackTrace();
-        }
-    }
+//    public void formatDate() {
+//        try{
+//            Date formattedDate = new SimpleDateFormat("dd-MM-yyyy").parse(this.date);
+//        } catch (ParseException e){
+//            e.printStackTrace();
+//        }
+//    }
 }

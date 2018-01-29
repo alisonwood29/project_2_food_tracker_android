@@ -21,7 +21,7 @@ public class DailyFoodTest {
         breakfast = new Breakfast("toast with jam", 200);
         lunch = new Lunch("chicken salad", 250);
         dinner = new Dinner("pizza", 650);
-        dailyFood = new DailyFood(breakfast, lunch, dinner, 1500);
+        dailyFood = new DailyFood(breakfast, lunch, dinner);
     }
 
     @Test
