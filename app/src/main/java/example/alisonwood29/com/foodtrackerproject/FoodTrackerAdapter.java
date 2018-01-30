@@ -23,10 +23,12 @@ public class FoodTrackerAdapter extends ArrayAdapter<DailyFood> {
     @Override
     public View getView(int position, View listItemView, ViewGroup parent) {
         if(listItemView == null){
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.daily_food_item, parent, false);
+            LayoutInflater inflater = LayoutInflater.from(getContext());
+            listItemView = inflater.inflate(R.layout.daily_food_item, parent, false);
         }
 
         DailyFood currentDailyFood = getItem(position);
+
 
         TextView date = (TextView) listItemView.findViewById(R.id.date_view);
         date.setText(currentDailyFood.getDate());

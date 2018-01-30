@@ -78,6 +78,8 @@ public class FoodInputActivity extends AppCompatActivity {
 
         FoodTracker foodTracker = new FoodTracker();
         foodTracker.addDailyFood(dailyFoodInput);
+
+        Log.d(getClass().toString(), "lunch is " + dailyFoodInput.getFood(lunch));
     }
 
 
