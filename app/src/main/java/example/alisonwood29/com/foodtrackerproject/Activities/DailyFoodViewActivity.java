@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import example.alisonwood29.com.foodtrackerproject.Models.DailyFood;
@@ -19,6 +20,7 @@ public class DailyFoodViewActivity extends AppCompatActivity {
     TextView dinnerFood;
     TextView dinnerCalories;
     TextView totalCalories;
+    ProgressBar calorieProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class DailyFoodViewActivity extends AppCompatActivity {
         dinnerFood = findViewById(R.id.select_dinner_food);
         dinnerCalories = findViewById(R.id.select_dinner_calories);
         totalCalories = findViewById(R.id.total_calories);
+        calorieProgress = findViewById(R.id.calories_progress_bar);
 
         Intent intent = getIntent();
         DailyFood dailyFood = (DailyFood) intent.getSerializableExtra("dailyFood");
@@ -45,5 +48,9 @@ public class DailyFoodViewActivity extends AppCompatActivity {
         dinnerFood.setText(dailyFood.getDinner().getFood());
         dinnerCalories.setText(String.valueOf(dailyFood.getDinner().getCalories()));
         totalCalories.setText(String.valueOf(dailyFood.totalCalories()));
+
+        calorieProgress.setMax(dailyFood.getMaxCalories());
+        calorieProgress.setProgress(dailyFood.caloriesRemaining());
+
     }
 }
