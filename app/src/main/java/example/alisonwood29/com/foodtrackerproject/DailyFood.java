@@ -9,10 +9,12 @@ import android.arch.persistence.room.PrimaryKey;
  * Created by alisonwood29 on 27/01/2018.
  */
 
-@Entity
+@Entity(tableName = "daily_foods")
 public class DailyFood {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
+    public int id;
+
     private String date;
 
     @Embedded(prefix = "breakfast_")

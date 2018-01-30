@@ -1,5 +1,6 @@
 package example.alisonwood29.com.foodtrackerproject;
 
+import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import java.util.Date;
+import java.util.List;
+
+import example.alisonwood29.com.foodtrackerproject.Database.AppDatabase;
 
 public class FoodInputActivity extends AppCompatActivity {
 
@@ -57,6 +61,7 @@ public class FoodInputActivity extends AppCompatActivity {
     }
 
     public void onSaveButtonClick(View button){
+
         String dateInput = date.getText().toString();
 
         String breakfastFoodInput = breakfastFood.getText().toString();
@@ -75,6 +80,12 @@ public class FoodInputActivity extends AppCompatActivity {
         Dinner dinner = new Dinner(dinnerFoodInput, dinnerCaloriesInput);
 
         DailyFood dailyFoodInput = new DailyFood(dateInput, breakfast, lunch, dinner);
+
+        AppDatabase.getAppDatabase(this).dailyFoodDao().insertDailyFood(dailyFoodInput);
+
+        List<DailyFood> savedFoods = AppDatabase.getAppDatabase(this).dailyFoodDao().getAllDailyFoods();
+        Log.d("Saved foods", savedFoods.get(0).getLunch().getFood());
+
 
         FoodTracker foodTracker = new FoodTracker();
         foodTracker.addDailyFood(dailyFoodInput);
