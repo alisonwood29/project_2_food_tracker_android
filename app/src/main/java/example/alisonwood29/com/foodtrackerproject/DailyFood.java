@@ -1,15 +1,30 @@
 package example.alisonwood29.com.foodtrackerproject;
 
+import android.arch.persistence.room.Embedded;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
+
 /**
  * Created by alisonwood29 on 27/01/2018.
  */
 
+@Entity
 public class DailyFood {
 
+    @PrimaryKey
     private String date;
+
+    @Embedded(prefix = "breakfast_")
     private Breakfast breakfast;
+
+    @Embedded(prefix = "lunch_")
     private Lunch lunch;
+
+    @Embedded(prefix = "dinner_")
     private Dinner dinner;
+
+    @Ignore
     private int maxCalories;
 
 
