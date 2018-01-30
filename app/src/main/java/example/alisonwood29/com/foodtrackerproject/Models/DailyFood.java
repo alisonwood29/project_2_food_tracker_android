@@ -5,12 +5,14 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
+import java.io.Serializable;
+
 /**
  * Created by alisonwood29 on 27/01/2018.
  */
 
 @Entity(tableName = "daily_foods")
-public class DailyFood {
+public class DailyFood implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     public int id;

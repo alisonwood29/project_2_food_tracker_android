@@ -44,6 +44,8 @@ public class FoodTrackerAdapter extends ArrayAdapter<DailyFood> {
         TextView dinner = listItemView.findViewById(R.id.dinner_view);
         dinner.setText(currentDailyFood.getDinner().getFood());
 
+        listItemView.setTag(currentDailyFood);
+
         return listItemView;
 
     }

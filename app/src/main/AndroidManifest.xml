@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.FoodInputActivity"
+        <activity
+            android:name=".Activities.FoodInputActivity"
             android:label="Daily Food Input">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,8 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.DailyFoodListActivity"
-            android:label="Daily Food Tracker"></activity>
+        <activity
+            android:name=".Activities.DailyFoodListActivity"
+            android:label="Daily Food Tracker" />
+        <activity android:name=".Activities.DailyFoodViewActivity"></activity>
     </application>
 
 </manifest>
