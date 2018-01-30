@@ -36,5 +36,14 @@ public class DailyFoodViewActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         DailyFood dailyFood = (DailyFood) intent.getSerializableExtra("dailyFood");
+
+        date.setText(dailyFood.getDate());
+        breakfastFood.setText(dailyFood.getBreakfast().getFood());
+        breakfastCalories.setText(String.valueOf(dailyFood.getBreakfast().getCalories()));
+        lunchFood.setText(dailyFood.getLunch().getFood());
+        lunchCalories.setText(String.valueOf(dailyFood.getLunch().getCalories()));
+        dinnerFood.setText(dailyFood.getDinner().getFood());
+        dinnerCalories.setText(String.valueOf(dailyFood.getDinner().getCalories()));
+        totalCalories.setText(String.valueOf(dailyFood.totalCalories()));
     }
 }
