@@ -1,7 +1,6 @@
-package example.alisonwood29.com.foodtrackerproject;
+package example.alisonwood29.com.foodtrackerproject.Adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import example.alisonwood29.com.foodtrackerproject.Models.DailyFood;
+import example.alisonwood29.com.foodtrackerproject.R;
 
 /**
  * Created by alisonwood29 on 29/01/2018.

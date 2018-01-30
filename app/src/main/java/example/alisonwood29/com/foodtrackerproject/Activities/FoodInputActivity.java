@@ -1,6 +1,5 @@
-package example.alisonwood29.com.foodtrackerproject;
+package example.alisonwood29.com.foodtrackerproject.Activities;
 
-import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,10 +11,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import java.util.Date;
 import java.util.List;
 
+import example.alisonwood29.com.foodtrackerproject.Models.Breakfast;
+import example.alisonwood29.com.foodtrackerproject.Models.DailyFood;
 import example.alisonwood29.com.foodtrackerproject.Database.AppDatabase;
+import example.alisonwood29.com.foodtrackerproject.Models.Dinner;
+import example.alisonwood29.com.foodtrackerproject.Models.FoodTracker;
+import example.alisonwood29.com.foodtrackerproject.Models.Lunch;
+import example.alisonwood29.com.foodtrackerproject.R;
 
 public class FoodInputActivity extends AppCompatActivity {
 
@@ -84,13 +88,12 @@ public class FoodInputActivity extends AppCompatActivity {
         AppDatabase.getAppDatabase(this).dailyFoodDao().insertDailyFood(dailyFoodInput);
 
         List<DailyFood> savedFoods = AppDatabase.getAppDatabase(this).dailyFoodDao().getAllDailyFoods();
-        Log.d("Saved foods", savedFoods.get(0).getLunch().getFood());
+        Log.d("Saved foods", savedFoods.get(2).getLunch().getFood());
 
 
-        FoodTracker foodTracker = new FoodTracker();
-        foodTracker.addDailyFood(dailyFoodInput);
+//        FoodTracker foodTracker = new FoodTracker();
+//        foodTracker.addDailyFood(dailyFoodInput);
 
-        Log.d(getClass().toString(), "lunch is " + dailyFoodInput.getFood(lunch));
     }
 
 

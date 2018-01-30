@@ -5,7 +5,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-import example.alisonwood29.com.foodtrackerproject.DailyFood;
+import example.alisonwood29.com.foodtrackerproject.Models.DailyFood;
 
 /**
  * Created by alisonwood29 on 30/01/2018.

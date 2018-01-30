@@ -6,10 +6,7 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
-import example.alisonwood29.com.foodtrackerproject.Breakfast;
-import example.alisonwood29.com.foodtrackerproject.DailyFood;
-import example.alisonwood29.com.foodtrackerproject.Dinner;
-import example.alisonwood29.com.foodtrackerproject.Lunch;
+import example.alisonwood29.com.foodtrackerproject.Models.DailyFood;
 
 /**
  * Created by alisonwood29 on 30/01/2018.
@@ -19,9 +16,8 @@ import example.alisonwood29.com.foodtrackerproject.Lunch;
 public interface DailyFoodDao {
 
     @Insert
-    public void insertDailyFood(DailyFood dailyFood);
+    void insertDailyFood(DailyFood dailyFood);
 
     @Query("SELECT * FROM daily_foods")
-    public List<DailyFood> getAllDailyFoods();
-
+    List<DailyFood> getAllDailyFoods();
 }

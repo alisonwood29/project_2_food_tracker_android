@@ -1,4 +1,4 @@
-package example.alisonwood29.com.foodtrackerproject;
+package example.alisonwood29.com.foodtrackerproject.Models;
 
 import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;

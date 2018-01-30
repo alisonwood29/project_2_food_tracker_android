@@ -1,9 +1,8 @@
-package example.alisonwood29.com.foodtrackerproject;
+package example.alisonwood29.com.foodtrackerproject.Models;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
+
+import example.alisonwood29.com.foodtrackerproject.Models.DailyFood;
 
 /**
  * Created by alisonwood29 on 29/01/2018.

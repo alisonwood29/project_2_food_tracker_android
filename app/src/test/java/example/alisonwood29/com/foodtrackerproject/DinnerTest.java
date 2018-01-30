@@ -3,6 +3,8 @@ package example.alisonwood29.com.foodtrackerproject;
 import org.junit.Before;
 import org.junit.Test;
 
+import example.alisonwood29.com.foodtrackerproject.Models.Dinner;
+
 import static org.junit.Assert.assertEquals;
 
 /**
