@@ -32,16 +32,16 @@ public class FoodTrackerAdapter extends ArrayAdapter<DailyFood> {
         DailyFood currentDailyFood = getItem(position);
 
 
-        TextView date = (TextView) listItemView.findViewById(R.id.date_view);
+        TextView date = listItemView.findViewById(R.id.date_view);
         date.setText(currentDailyFood.getDate());
 
-        TextView breakfast = (TextView) listItemView.findViewById(R.id.breakfast_view);
+        TextView breakfast = listItemView.findViewById(R.id.breakfast_view);
         breakfast.setText(currentDailyFood.getBreakfast().getFood());
 
-        TextView lunch = (TextView) listItemView.findViewById(R.id.lunch_view);
+        TextView lunch = listItemView.findViewById(R.id.lunch_view);
         lunch.setText(currentDailyFood.getLunch().getFood());
 
-        TextView dinner = (TextView) listItemView.findViewById(R.id.dinner_view);
+        TextView dinner = listItemView.findViewById(R.id.dinner_view);
         dinner.setText(currentDailyFood.getDinner().getFood());
 
         return listItemView;

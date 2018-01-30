@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -89,6 +90,8 @@ public class FoodInputActivity extends AppCompatActivity {
 
         List<DailyFood> savedFoods = AppDatabase.getAppDatabase(this).dailyFoodDao().getAllDailyFoods();
         Log.d("Saved foods", savedFoods.get(2).getLunch().getFood());
+
+        Toast.makeText(FoodInputActivity.this, R.string.saved_toast, Toast.LENGTH_LONG).show();
 
     }
 
