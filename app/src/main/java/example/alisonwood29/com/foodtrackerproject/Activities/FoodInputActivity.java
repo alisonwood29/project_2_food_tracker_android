@@ -90,10 +90,6 @@ public class FoodInputActivity extends AppCompatActivity {
         List<DailyFood> savedFoods = AppDatabase.getAppDatabase(this).dailyFoodDao().getAllDailyFoods();
         Log.d("Saved foods", savedFoods.get(2).getLunch().getFood());
 
-
-//        FoodTracker foodTracker = new FoodTracker();
-//        foodTracker.addDailyFood(dailyFoodInput);
-
     }
 
 

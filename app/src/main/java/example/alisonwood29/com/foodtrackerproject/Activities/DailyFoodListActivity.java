@@ -23,11 +23,6 @@ public class DailyFoodListActivity extends AppCompatActivity {
 
         List<DailyFood> savedFoodsAsList = new ArrayList<>(AppDatabase.getAppDatabase(this).dailyFoodDao().getAllDailyFoods());
         ArrayList<DailyFood> savedFoods = new ArrayList<>(savedFoodsAsList);
-//        savedFoods = AppDatabase.getAppDatabase(this).dailyFoodDao().getAllDailyFoods();
-
-
-//        FoodTracker foodTracker = new FoodTracker();
-//        ArrayList<DailyFood> dailyFoodList = foodTracker.getDailyFoodsList();
 
         FoodTrackerAdapter foodTrackerAdapter = new FoodTrackerAdapter(this, savedFoods);
 
