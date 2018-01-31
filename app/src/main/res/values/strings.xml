@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FoodTrackerProject</string>
+    <string name="app_name">Food Tracker</string>
     <string name="save_daily_food">Save</string>
     <string name="list_view">Daily Food List</string>
     <string name="saved_toast">Daily Food Saved Successfully!</string>
