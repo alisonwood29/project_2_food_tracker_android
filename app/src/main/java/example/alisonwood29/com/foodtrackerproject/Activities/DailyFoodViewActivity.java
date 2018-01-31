@@ -7,6 +7,13 @@ import android.util.Log;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import example.alisonwood29.com.foodtrackerproject.Models.DailyFood;
 import example.alisonwood29.com.foodtrackerproject.R;
 
@@ -20,6 +27,7 @@ public class DailyFoodViewActivity extends AppCompatActivity {
     TextView dinnerFood;
     TextView dinnerCalories;
     TextView totalCalories;
+    PieChart caloriePieChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +42,7 @@ public class DailyFoodViewActivity extends AppCompatActivity {
         dinnerFood = findViewById(R.id.select_dinner_food);
         dinnerCalories = findViewById(R.id.select_dinner_calories);
         totalCalories = findViewById(R.id.total_calories);
+        caloriePieChart = findViewById(R.id.calorie_pie_chart);
 
         Intent intent = getIntent();
         DailyFood dailyFood = (DailyFood) intent.getSerializableExtra("dailyFood");
@@ -46,6 +55,17 @@ public class DailyFoodViewActivity extends AppCompatActivity {
         dinnerFood.setText(dailyFood.getDinner().getFood());
         dinnerCalories.setText(String.valueOf(dailyFood.getDinner().getCalories()));
         totalCalories.setText(String.valueOf(dailyFood.totalCalories()));
+
+        caloriePieChart.setHoleRadius(80);
+        caloriePieChart.setCenterText(String.valueOf(dailyFood.getMaxCalories()));
+
+        List<PieEntry> calorieEntries = new ArrayList<>();
+
+        calorieEntries.add(new PieEntry(dailyFood.totalCalories(), "total calories"));
+
+
+
+//        PieDataSet calorieData = new PieDataSet();
 
 
     }
