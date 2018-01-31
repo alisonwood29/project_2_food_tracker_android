@@ -27,6 +27,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
+        android:background="@android:color/background_light"
         android:ems="10"
         android:hint="enter lunch"
         android:inputType="textPersonName"
@@ -40,6 +41,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
+        android:background="@android:color/background_light"
         android:ems="10"
         android:hint="enter dinner"
         android:inputType="textPersonName"
@@ -55,6 +57,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="128dp"
+        android:background="@android:color/background_light"
         android:ems="10"
         android:hint="enter calories"
         android:inputType="number"
@@ -70,6 +73,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
+        android:background="@android:color/background_light"
         android:ems="10"
         android:hint="enter calories"
         android:inputType="number"
@@ -86,6 +90,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
+        android:background="@android:color/background_light"
         android:ems="10"
         android:hint="enter calories"
         android:inputType="number"
@@ -104,6 +109,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@color/colorPrimaryDark"
         android:onClick="onSaveButtonClick"
         android:text="@string/save_daily_food"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -112,11 +118,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95" />
 
-    <DatePicker
-        android:id="@+id/datePicker"
+    <EditText
+        android:id="@+id/enter_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 </android.support.constraint.ConstraintLayout>

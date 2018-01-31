@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
@@ -61,6 +62,7 @@ public class DailyFoodViewActivity extends AppCompatActivity {
         totalCalories.setText(String.valueOf("total calories: " + dailyFood.totalCalories()));
 
         caloriePieChart.setHoleRadius(70);
+        caloriePieChart.setHoleColor(Color.TRANSPARENT);
         caloriePieChart.setCenterText("Daily calorie intake is:\n" + dailyFood.getMaxCalories() + " calories");
         caloriePieChart.setDescription(null);
 //        caloriePieChart.setMaxAngle(270f);
@@ -77,6 +79,8 @@ public class DailyFoodViewActivity extends AppCompatActivity {
 
         caloriePieChart.setData(calorieData);
         caloriePieChart.invalidate();
+
+
 
         ArrayList<Integer> colours = new ArrayList<>();
         colours.add(Color.CYAN);
