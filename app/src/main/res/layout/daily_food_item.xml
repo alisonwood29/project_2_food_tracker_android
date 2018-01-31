@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/date_view"
-        android:layout_width="85dp"
-        android:layout_height="32dp"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:text="TextView"
@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/breakfast_view"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
@@ -30,9 +30,9 @@
 
     <TextView
         android:id="@+id/lunch_view"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="45dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
         android:text="TextView"
         android:textSize="16sp"
@@ -41,9 +41,10 @@
 
     <TextView
         android:id="@+id/dinner_view"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="45dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
         android:text="TextView"
         android:textSize="16sp"
