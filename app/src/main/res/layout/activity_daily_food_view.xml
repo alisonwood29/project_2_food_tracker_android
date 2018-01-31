@@ -107,10 +107,15 @@
         app:layout_constraintVertical_bias="0.599" />
 
     <com.github.mikephil.charting.charts.PieChart
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/calorie_pie_chart"
-        ></com.github.mikephil.charting.charts.PieChart>
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></com.github.mikephil.charting.charts.PieChart>
 
 
 </android.support.constraint.ConstraintLayout>

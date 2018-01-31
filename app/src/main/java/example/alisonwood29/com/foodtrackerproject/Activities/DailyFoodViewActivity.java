@@ -59,8 +59,8 @@ public class DailyFoodViewActivity extends AppCompatActivity {
         dinnerCalories.setText(String.valueOf(dailyFood.getDinner().getCalories()));
         totalCalories.setText(String.valueOf(dailyFood.totalCalories()));
 
-        caloriePieChart.setHoleRadius(80);
-        caloriePieChart.setCenterText(String.valueOf(dailyFood.getMaxCalories()));
+        caloriePieChart.setHoleRadius(70);
+        caloriePieChart.setCenterText("Daily calorie intake is:\n" + dailyFood.getMaxCalories() + " calories");
 
         calorieEntries = new ArrayList<>();
 
