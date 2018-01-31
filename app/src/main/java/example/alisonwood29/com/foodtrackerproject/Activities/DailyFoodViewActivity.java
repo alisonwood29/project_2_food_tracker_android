@@ -1,6 +1,7 @@
 package example.alisonwood29.com.foodtrackerproject.Activities;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 
@@ -28,6 +30,7 @@ public class DailyFoodViewActivity extends AppCompatActivity {
     TextView dinnerCalories;
     TextView totalCalories;
     PieChart caloriePieChart;
+    List<PieEntry> calorieEntries;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,14 +62,22 @@ public class DailyFoodViewActivity extends AppCompatActivity {
         caloriePieChart.setHoleRadius(80);
         caloriePieChart.setCenterText(String.valueOf(dailyFood.getMaxCalories()));
 
-        List<PieEntry> calorieEntries = new ArrayList<>();
+        calorieEntries = new ArrayList<>();
 
         calorieEntries.add(new PieEntry(dailyFood.totalCalories(), "total calories"));
         calorieEntries.add(new PieEntry(dailyFood.caloriesRemaining(), "remaining calories"));
 
+        PieDataSet calorieDataSet = new PieDataSet(calorieEntries, "Calories");
+        PieData calorieData = new PieData(calorieDataSet);
 
+        caloriePieChart.setData(calorieData);
+        caloriePieChart.invalidate();
 
-//        PieDataSet calorieData = new PieDataSet();
+        ArrayList<Integer> colours = new ArrayList<>();
+        colours.add(Color.CYAN);
+        colours.add(Color.GRAY);
+
+        calorieDataSet.setColors(colours);
 
 
     }
