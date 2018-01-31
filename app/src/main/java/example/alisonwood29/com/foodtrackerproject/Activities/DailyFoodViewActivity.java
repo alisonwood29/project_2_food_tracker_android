@@ -52,15 +52,22 @@ public class DailyFoodViewActivity extends AppCompatActivity {
 
         date.setText(dailyFood.getDate());
         breakfastFood.setText(dailyFood.getBreakfast().getFood());
-        breakfastCalories.setText(String.valueOf(dailyFood.getBreakfast().getCalories()));
+        breakfastCalories.setText(String.valueOf(dailyFood.getBreakfast().getCalories() + " calories"));
         lunchFood.setText(dailyFood.getLunch().getFood());
-        lunchCalories.setText(String.valueOf(dailyFood.getLunch().getCalories()));
+        lunchCalories.setText(String.valueOf(dailyFood.getLunch().getCalories() + " calories"));
         dinnerFood.setText(dailyFood.getDinner().getFood());
-        dinnerCalories.setText(String.valueOf(dailyFood.getDinner().getCalories()));
-        totalCalories.setText(String.valueOf(dailyFood.totalCalories()));
+        dinnerCalories.setText(String.valueOf(dailyFood.getDinner().getCalories() + " calories"));
+        totalCalories.setText(String.valueOf("total calories: " + dailyFood.totalCalories()));
 
         caloriePieChart.setHoleRadius(70);
         caloriePieChart.setCenterText("Daily calorie intake is:\n" + dailyFood.getMaxCalories() + " calories");
+        caloriePieChart.setDescription(null);
+//        caloriePieChart.setMaxAngle(270f);
+        caloriePieChart.setEntryLabelTextSize(16);
+        caloriePieChart.setEntryLabelColor(Color.BLACK);
+        caloriePieChart.setCenterTextSize(16);
+
+
 
         calorieEntries = new ArrayList<>();
 
