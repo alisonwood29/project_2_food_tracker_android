@@ -62,6 +62,7 @@ public class DailyFoodViewActivity extends AppCompatActivity {
         List<PieEntry> calorieEntries = new ArrayList<>();
 
         calorieEntries.add(new PieEntry(dailyFood.totalCalories(), "total calories"));
+        calorieEntries.add(new PieEntry(dailyFood.caloriesRemaining(), "remaining calories"));
 
 
 
