@@ -9,6 +9,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
@@ -67,10 +68,7 @@ public class DailyFoodViewActivity extends AppCompatActivity {
         caloriePieChart.setEntryLabelColor(Color.BLACK);
         caloriePieChart.setCenterTextSize(16);
 
-
-
         calorieEntries = new ArrayList<>();
-
         calorieEntries.add(new PieEntry(dailyFood.totalCalories(), "total calories"));
         calorieEntries.add(new PieEntry(dailyFood.caloriesRemaining(), "remaining calories"));
 
