@@ -4,4 +4,5 @@
     <string name="list_view">Daily Food List</string>
     <string name="saved_toast">Daily Food Saved Successfully!</string>
     <string name="select_date">Select Date</string>
+    <string name="enter_more_meals">Enter More Meals</string>
 </resources>

@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Activities.FoodInputActivity"
-            android:label="Daily Food Input">
+            android:label="Enter Daily Meals">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:name=".Activities.DailyFoodListActivity"
-            android:label="Daily Food Tracker" />
+            android:label="Daily Meals By Date" />
         <activity android:name=".Activities.DailyFoodViewActivity"></activity>
     </application>
 
