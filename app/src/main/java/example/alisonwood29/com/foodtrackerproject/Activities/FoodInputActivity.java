@@ -64,7 +64,7 @@ public class FoodInputActivity extends AppCompatActivity {
                 DatePickerDialog dialog = new DatePickerDialog(FoodInputActivity.this,
                         android.R.style.Theme_Holo_Light_Dialog_MinWidth, onDateSetListener, year, month, day);
 
-//                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.show();
             }
 
@@ -99,15 +99,6 @@ public class FoodInputActivity extends AppCompatActivity {
     }
 
     public void onSaveButtonClick(View button){
-        onDateSetListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                month = month + 1;
-
-                String selectedDate = day + "/" + "/" + month + "/" + year;
-                date.setText(selectedDate);
-            }
-        };
 
         String dateInput = date.getText().toString();
 

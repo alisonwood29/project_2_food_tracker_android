@@ -13,8 +13,7 @@ import java.io.Serializable;
  * Created by alisonwood29 on 27/01/2018.
  */
 
-@Entity(tableName = "daily_foods", indices = {@Index(value = {"date"},
-        unique = true)})
+@Entity(tableName = "daily_foods")
 public class DailyFood implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
