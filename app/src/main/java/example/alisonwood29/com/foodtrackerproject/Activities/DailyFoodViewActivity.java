@@ -84,7 +84,7 @@ public class DailyFoodViewActivity extends AppCompatActivity {
 
         ArrayList<Integer> colours = new ArrayList<>();
         colours.add(Color.CYAN);
-        colours.add(Color.GRAY);
+        colours.add(Color.LTGRAY);
 
         calorieDataSet.setColors(colours);
 

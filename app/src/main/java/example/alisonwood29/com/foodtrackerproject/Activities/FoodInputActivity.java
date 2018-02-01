@@ -1,6 +1,9 @@
 package example.alisonwood29.com.foodtrackerproject.Activities;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,9 +12,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.List;
 
 import example.alisonwood29.com.foodtrackerproject.Models.Breakfast;
@@ -32,6 +37,7 @@ public class FoodInputActivity extends AppCompatActivity {
     EditText lunchCalories;
     EditText dinnerCalories;
     Button saveDailyFoods;
+    DatePickerDialog.OnDateSetListener onDateSetListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +52,33 @@ public class FoodInputActivity extends AppCompatActivity {
         lunchCalories = findViewById(R.id.lunch_calories);
         dinnerCalories = findViewById(R.id.dinner_calories);
         saveDailyFoods = findViewById(R.id.save_button);
+
+        date.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Calendar calendar = Calendar.getInstance();
+                int year = calendar.get(Calendar.YEAR);
+                int month = calendar.get(Calendar.MONTH);
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(FoodInputActivity.this,
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth, onDateSetListener, year, month, day);
+
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+
+        });
+
+        onDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                month = month + 1;
+
+                String selectedDate = day + "/" + month + "/" + year;
+                date.setText(selectedDate);
+            }
+        };
 
     }
 
@@ -66,6 +99,15 @@ public class FoodInputActivity extends AppCompatActivity {
     }
 
     public void onSaveButtonClick(View button){
+        onDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                month = month + 1;
+
+                String selectedDate = day + "/" + "/" + month + "/" + year;
+                date.setText(selectedDate);
+            }
+        };
 
         String dateInput = date.getText().toString();
 
