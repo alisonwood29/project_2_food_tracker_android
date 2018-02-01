@@ -4,6 +4,7 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
 
 import java.io.Serializable;
@@ -12,7 +13,8 @@ import java.io.Serializable;
  * Created by alisonwood29 on 27/01/2018.
  */
 
-@Entity(tableName = "daily_foods")
+@Entity(tableName = "daily_foods", indices = {@Index(value = {"date"},
+        unique = true)})
 public class DailyFood implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
