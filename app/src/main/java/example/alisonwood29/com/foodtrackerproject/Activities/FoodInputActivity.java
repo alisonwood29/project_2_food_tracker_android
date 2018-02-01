@@ -64,7 +64,7 @@ public class FoodInputActivity extends AppCompatActivity {
                 DatePickerDialog dialog = new DatePickerDialog(FoodInputActivity.this,
                         android.R.style.Theme_Holo_Light_Dialog_MinWidth, onDateSetListener, year, month, day);
 
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.show();
             }
 
