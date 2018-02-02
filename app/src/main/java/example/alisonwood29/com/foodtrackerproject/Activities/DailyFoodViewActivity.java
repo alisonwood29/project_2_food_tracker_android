@@ -68,7 +68,6 @@ public class DailyFoodViewActivity extends AppCompatActivity {
         caloriePieChart.setHoleColor(Color.TRANSPARENT);
         caloriePieChart.setCenterText("Daily calorie intake is:\n" + dailyFood.getMaxCalories() + " calories");
         caloriePieChart.setDescription(null);
-//        caloriePieChart.setMaxAngle(270f);
         caloriePieChart.setEntryLabelTextSize(16);
         caloriePieChart.setEntryLabelColor(Color.BLACK);
         caloriePieChart.setCenterTextSize(16);
